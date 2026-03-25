@@ -1,0 +1,195 @@
+/* DashboardPage Styles */
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --border-radius-md: 12px;
+  --border-radius-sm: 8px;
+  --spacing-unit: 8px;
+}
+
+/* Loading State */
+.dashboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* Error Alert */
+.dashboard-error {
+  border-radius: 8px;
+  background-color: #fee;
+}
+
+/* Header Section */
+.dashboard-header {
+  margin-bottom: calc(var(--spacing-unit) * 6.25);
+}
+
+.dashboard-header__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: calc(var(--spacing-unit) * 3.75);
+}
+
+.dashboard-header__title {
+  font-weight: 800;
+  margin-bottom: calc(var(--spacing-unit));
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.dashboard-header__subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.dashboard-header__create-button {
+  background: var(--primary-gradient);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 10px 24px;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.dashboard-header__create-button:hover {
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Stats Grid */
+.dashboard-stats {
+  margin-bottom: calc(var(--spacing-unit) * 6.25);
+}
+
+/* Stat Card */
+.dashboard-stat-card {
+  padding: calc(var(--spacing-unit) * 3.125);
+  border-radius: var(--border-radius-md);
+  border: none;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-stat-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.dashboard-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--stat-color, #667eea);
+}
+
+.dashboard-stat-card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.dashboard-stat-card__label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: calc(var(--spacing-unit));
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-stat-card__value {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.dashboard-stat-card__icon {
+  font-size: 2rem;
+}
+
+/* Projects Section */
+.dashboard-projects {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+.dashboard-projects__header {
+  margin-bottom: calc(var(--spacing-unit) * 3.75);
+}
+
+.dashboard-projects__title {
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit));
+  font-size: 1.25rem;
+}
+
+.dashboard-projects__title-indicator {
+  width: 4px;
+  height: 28px;
+  border-radius: 2px;
+  background: var(--primary-gradient);
+}
+
+.dashboard-projects__grid {
+  margin-top: 0;
+}
+
+/* Empty State */
+.dashboard-empty-state {
+  padding: calc(var(--spacing-unit) * 5);
+  text-align: center;
+  border-radius: var(--border-radius-md);
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  border: 2px dashed #e5e7eb;
+}
+
+.dashboard-empty-state__title {
+  color: var(--text-secondary);
+  margin-bottom: calc(var(--spacing-unit));
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.dashboard-empty-state__description {
+  color: var(--text-tertiary);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+  font-size: 0.9rem;
+}
+
+.dashboard-empty-state__button {
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius-sm);
+  text-transform: none;
+  font-weight: 600;
+  margin-top: calc(var(--spacing-unit) * 2.5);
+}
+
+.dashboard-empty-state__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}

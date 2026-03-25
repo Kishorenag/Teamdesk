@@ -1,0 +1,42 @@
+/* LoginPage Styles */
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-color: #667eea;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --spacing-unit: 8px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.login-form__submit-button {
+  background: var(--primary-gradient);
+  margin-top: calc(var(--spacing-unit) * 2.5);
+  text-transform: none;
+  font-weight: 600;
+}
+
+.login-form__submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.login-form__footer-text {
+  text-align: center;
+  margin-top: calc(var(--spacing-unit));
+}
+
+.login-form__footer-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-form__footer-link:hover {
+  text-decoration: underline;
+}

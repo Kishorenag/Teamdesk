@@ -1,0 +1,286 @@
+/* TeamPage Styles */
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-color: #667eea;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --border-radius-md: 12px;
+  --border-radius-sm: 8px;
+  --spacing-unit: 8px;
+}
+
+/* Header */
+.team-header {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+.team-header__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: calc(var(--spacing-unit) * 3.75);
+}
+
+.team-header__title {
+  font-weight: 800;
+  margin-bottom: calc(var(--spacing-unit));
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-header__subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.team-header__add-button {
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius-sm);
+  padding: 10px 24px;
+  text-transform: none;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.team-header__add-button:hover {
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Current User Section */
+.team-current-user {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+.team-current-user__label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+.team-current-user-card {
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius-md);
+  padding: calc(var(--spacing-unit) * 3.125);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.team-current-user-card__content {
+  display: flex;
+  align-items: flex-start;
+  gap: calc(var(--spacing-unit) * 2);
+  position: relative;
+  z-index: 1;
+}
+
+.team-current-user-card__avatar {
+  width: 80px;
+  height: 80px;
+  border: 3px solid white;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+.team-current-user-card__info {
+  flex: 1;
+}
+
+.team-current-user-card__name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit));
+}
+
+.team-current-user-card__badge {
+  background: rgba(255, 255, 255, 0.3);
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit));
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.team-current-user-card__email {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: calc(var(--spacing-unit));
+}
+
+.team-current-user-card__role {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.team-current-user-card__decoration {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Team Members Section */
+.team-members {
+  margin-top: calc(var(--spacing-unit) * 5);
+}
+
+.team-members__label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.team-members-table {
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.team-members-table__header {
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.team-members-table__row:hover {
+  background-color: #f9fafb;
+}
+
+/* Member Avatar */
+.team-member-avatar {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.team-member-info__name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.team-member-info__email {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.team-member-role {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.team-member-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit));
+  border-radius: 4px;
+}
+
+.team-member-status-active {
+  color: #10b981;
+  background-color: #d1fae5;
+}
+
+.team-member-status-inactive {
+  color: var(--text-secondary);
+  background-color: #f3f4f6;
+}
+
+.team-member-remove-button {
+  color: #ef4444;
+  transition: background 0.2s ease;
+}
+
+.team-member-remove-button:hover {
+  background-color: #fee2e2;
+}
+
+/* Empty State */
+.team-empty-state {
+  padding: calc(var(--spacing-unit) * 10);
+  text-align: center;
+  border-radius: var(--border-radius-md);
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  border: 2px dashed #e5e7eb;
+}
+
+.team-empty-state__icon {
+  font-size: 4rem;
+  color: #d1d5db;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.team-empty-state__title {
+  color: var(--text-secondary);
+  margin-bottom: calc(var(--spacing-unit));
+  font-weight: 600;
+}
+
+.team-empty-state__description {
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+}
+
+.team-empty-state__button {
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius-sm);
+  text-transform: none;
+  font-weight: 600;
+}
+
+/* Add Member Dialog */
+.team-add-member-dialog__title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.team-add-member-dialog__content {
+  padding-top: calc(var(--spacing-unit) * 3.75);
+}
+
+.team-add-member-dialog__field {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.team-add-member-dialog__footer {
+  padding: calc(var(--spacing-unit) * 2);
+  gap: calc(var(--spacing-unit));
+}
+
+.team-add-member-dialog__cancel {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.team-add-member-dialog__cancel:hover {
+  background-color: #f3f4f6;
+}
+
+.team-add-member-dialog__submit {
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius-sm);
+  text-transform: none;
+  font-weight: 600;
+}
