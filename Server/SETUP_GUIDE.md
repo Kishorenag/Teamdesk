@@ -86,8 +86,11 @@ mongod
 4. Get connection string
 5. Update `MONGODB_URI` in `.env`:
    ```
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/project-management?retryWrites=true&w=majority
+   MONGODB_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/project-management?retryWrites=true&w=majority
    ```
+   - Replace `<username>` with your MongoDB user
+   - Replace `<password>` with your MongoDB password
+   - Replace `<cluster>` with your cluster name
 
 ### Step 4: Start Backend Development Server
 
